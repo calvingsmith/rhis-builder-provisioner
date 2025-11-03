@@ -1,5 +1,5 @@
 ---
-
+# code: language=ansible
 cdn_organization: "{{ cdn_organization_vault }}"
 cdn_activation_key: "{{ cdn_activation_key_vault }}"
 # Base network info
@@ -8,10 +8,10 @@ _default_domain: "example.ca"
 git_configs:
   - name: "user.name"
     scope: "global"
-    value: "parmstro@redhat.com"
+    value: "casmith@redhat.com"
   - name: "user.email"
     scope: "global"
-    value: "parmstro@redhat.com"
+    value: "casmith@redhat.com"
 
 environment_hosts:
   - name: "provisioner.{{ _default_domain }}"

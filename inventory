@@ -1,6 +1,6 @@
 [provisioner]
-provisioner.example.ca
+builder.demo.net
 
 [bootstrap]
-idm.example.ca
-satellite.example.ca
+idm.demo.net
+satellite.demo.net

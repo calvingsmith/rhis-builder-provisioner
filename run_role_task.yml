@@ -17,12 +17,12 @@
       ansible.builtin.include_vars:
         file: "{{ vars_path }}"
 
-    - name: "Load the vault variables"
+    - name: "Load the vault variables (dir)"
       when: vault_dir is defined
       ansible.builtin.include_vars:
         dir: "{{ vault_dir }}"
 
-    - name: "Load the other variables"
+    - name: "Load the other variables (dir)"
       when: vars_dir is defined
       ansible.builtin.include_vars:
         dir: "{{ vars_dir }}"

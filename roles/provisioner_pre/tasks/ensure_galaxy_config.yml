@@ -1,4 +1,5 @@
 ---
+# code: language=ansible
 
 # Parsing the remote ini file is a pain.
 # Lets copy the file locally to a temporary location and use lookup.
