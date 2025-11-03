@@ -1,4 +1,5 @@
 ---
+# code: language=ansible
 
 - name: "Ensure required python modules are available"
   when: rhis_provisioner_python_modules is defined and (rhis_provisioner_python_modules | length) > 0

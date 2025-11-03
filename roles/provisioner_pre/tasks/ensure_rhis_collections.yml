@@ -1,4 +1,5 @@
 ---
+# code: language=ansible
 
 - name: "Make sure the remote directory exists on the provisioner node."
   ansible.builtin.file:

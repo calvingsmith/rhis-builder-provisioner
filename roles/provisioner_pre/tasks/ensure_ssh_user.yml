@@ -1,4 +1,5 @@
 ---
+# code: language=ansible
 
 - name: "Examine the public key path"
   connection: local

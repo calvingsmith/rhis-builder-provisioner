@@ -1,4 +1,5 @@
 ---
+# code: language=ansible
 
 - name: "Add idm and satellite host entries to /etc/hosts"
   ansible.builtin.lineinfile:

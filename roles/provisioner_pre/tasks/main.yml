@@ -1,4 +1,5 @@
 ---
+# code: language=ansible
 
 # Configure the prerequisites for the provisioner
 - name: "Ensure ssh key"

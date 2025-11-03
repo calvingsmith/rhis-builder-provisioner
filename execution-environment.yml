@@ -1,0 +1,28 @@
+---
+version: 3
+
+images:
+  base_image:
+    name: docker.io/redhat/ubi9:latest
+    pull: true
+
+additional_build_files:
+  - src: /home/casmith/.ssh/cgs_key
+    dest: id_rsa
+
+additional_build_steps:
+  append_final: 
+    - RUN chmod 0600 /root/.ssh/id_rsa
+#     - RUN echo "------------"
+#     - RUN ls -l /runner
+    
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core
+  ansible_runner:
+    package_pip: ansible-runner
+  system:
+  - openssh-clients
+  - sshpass
+  galaxy: requirements.yml
