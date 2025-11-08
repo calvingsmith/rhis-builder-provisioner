@@ -16,7 +16,7 @@ build_arg_defaults:
    ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'
 
 additional_build_files:
-  - src: files/ansible.cfg
+  - src: ansible.cfg
     dest: configs
   - src: files/aap-example-org.pem
     dest: configs
