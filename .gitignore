@@ -2,3 +2,5 @@
 *.code-workspace
 *vault.yml
 parmstrong.ca*
+context
+*.pem

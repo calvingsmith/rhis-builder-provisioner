@@ -1,32 +1,39 @@
----
 version: 3
 
 images:
   base_image:
-    name: docker.io/redhat/ubi9:latest
-    pull: true
-
-build_arg_defaults:
-  ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'
-
-additional_build_files:
-  - src: /home/casmith/.ssh/cgs_key
-    dest: id_rsa
-
-additional_build_steps:
-  append_final: 
-    - RUN chmod 0600 /root/.ssh/id_rsa
-#     - RUN echo "------------"
-#     - RUN ls -l /runner
-    
-
+    name: aap.example.org/ee-minimal-rhel9:latest
 
 dependencies:
-  ansible_core:
-    package_pip: ansible-core
-  ansible_runner:
-    package_pip: ansible-runner
-  system:
-  - openssh-clients
-  - sshpass
+  python: requirements.txt
   galaxy: requirements.yml
+  system: bindep.txt
+
+options:
+  package_manager_path: /usr/bin/microdnf
+
+build_arg_defaults:
+   ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'
+
+additional_build_files:
+  - src: files/ansible.cfg
+    dest: configs
+  - src: files/cert.pem
+    dest: configs
+  # uncomment if custom RPM repositories are required
+  #- src: files/custom.repo
+  #  dest: configs
+
+additional_build_steps:
+  prepend_base:
+    # remove the default UBI repository definition
+    # - RUN rm -f /etc/yum.repos.d/ubi.repo
+    # copy the hub CA certificate and update the trust store
+    - ADD _build/configs/cert.pem /etc/pki/ca-trust/source/anchors
+    - RUN update-ca-trust
+    - ADD _build/configs/ansible.cfg /etc/ansible/ansible.cfg
+    # if needed, uncomment to add a custom RPM repository configuration
+    #- ADD _build/configs/custom.repo /etc/yum.repos.d/custom.repo
+
+  # prepend_galaxy:
+  #  - ADD _build/configs/ansible.cfg ~/.ansible.cfg
