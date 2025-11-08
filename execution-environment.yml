@@ -20,6 +20,8 @@ additional_build_files:
     dest: configs
   - src: files/aap-example-org.pem
     dest: configs
+  - src: .ansible/galaxy_token
+    dest: configs
   # uncomment if custom RPM repositories are required
   #- src: files/custom.repo
   #  dest: configs

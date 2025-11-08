@@ -1,18 +1,23 @@
 ---
 # These are the collections required by the builder
 collections:
-  - azure.azcollection
-  - community.general
-  - community.vmware
-  - community.aws
-  - containers.podman
-  - redhat.rhel_idm
-  - redhat.rhel_system_roles
-  - redhat.satellite
-  - redhat.satellite_operations
-  - redhat.redhat_csp_download
-  - ansible.controller
-  - ansible.netcommon
-  - ansible.posix
-  - ansible.utils
+  - name: azure.azcollection
+  - name: community.general
+    version: 11.3.0
+  - name: community.vmware
+    version: 6.1.0
+  - name: community.aws
+    version: "<10"
+  - name: amazon.aws
+    version: "<10"
+  - name: containers.podman
+  - name: redhat.rhel_idm
+  - name: redhat.rhel_system_roles
+  - name: redhat.satellite
+  - name: redhat.satellite_operations
+  - name: redhat.redhat_csp_download
+  - name: ansible.controller
+  - name: ansible.netcommon
+  - name: ansible.posix
+  - name: ansible.utils
  
