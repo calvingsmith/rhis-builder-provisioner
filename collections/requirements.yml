@@ -1,10 +1,6 @@
 ---
 # These are the collections required by the builder
 collections:
-  - ansible.controller
-  - ansible.netcommon
-  - ansible.posix
-  - ansible.utils
   - azure.azcollection
   - community.general
   - community.vmware
@@ -15,3 +11,8 @@ collections:
   - redhat.satellite
   - redhat.satellite_operations
   - redhat.redhat_csp_download
+  - ansible.controller
+  - ansible.netcommon
+  - ansible.posix
+  - ansible.utils
+ 
