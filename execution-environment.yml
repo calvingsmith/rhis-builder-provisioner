@@ -6,7 +6,7 @@ images:
 
 dependencies:
   python: requirements.txt
-  galaxy: requirements.yml
+  galaxy: collections/requirements.yml
   system: bindep.txt
 
 options:
@@ -18,7 +18,7 @@ build_arg_defaults:
 additional_build_files:
   - src: files/ansible.cfg
     dest: configs
-  - src: files/cert.pem
+  - src: files/aap-example-org.pem
     dest: configs
   # uncomment if custom RPM repositories are required
   #- src: files/custom.repo
@@ -29,7 +29,7 @@ additional_build_steps:
     # remove the default UBI repository definition
     # - RUN rm -f /etc/yum.repos.d/ubi.repo
     # copy the hub CA certificate and update the trust store
-    - ADD _build/configs/cert.pem /etc/pki/ca-trust/source/anchors
+    - ADD _build/configs/aap-example-org.pem /etc/pki/ca-trust/source/anchors
     - RUN update-ca-trust
     - ADD _build/configs/ansible.cfg /etc/ansible/ansible.cfg
     # if needed, uncomment to add a custom RPM repository configuration
