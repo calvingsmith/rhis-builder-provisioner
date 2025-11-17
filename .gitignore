@@ -4,3 +4,5 @@
 parmstrong.ca*
 context
 *.pem
+.ansible
+vault
