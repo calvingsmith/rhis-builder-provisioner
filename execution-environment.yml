@@ -2,8 +2,8 @@ version: 3
 
 images:
   base_image:
-    name: aap.example.org/ee-minimal-rhel9:latest
-    # name: aap.example.org/ee-supported-rhel9:latest
+    name: aap.example.com/ee-minimal-rhel9:latest
+    # name: aap.example.com/ee-supported-rhel9:latest
 
 dependencies:
   python: requirements.txt
