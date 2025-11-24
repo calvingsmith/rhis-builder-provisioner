@@ -23,7 +23,7 @@ We will initially pursue method 1 as this is the simplest. At a future date we w
 - Deployment is on RHEL9
 
 ## What you will need at a minimum:
-- a plan! What sort of environment do you want to build? For a sample - example.ca - see the wiki
+- a plan! What sort of environment do you want to build? For a sample - demo.net - see the wiki
 - a node to serve as the provisioner (virtual or baremetal)
 - a node for identity management
 - a node for satellite

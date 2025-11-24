@@ -3,7 +3,7 @@
 cdn_organization: "{{ cdn_organization_vault }}"
 cdn_activation_key: "{{ cdn_activation_key_vault }}"
 # Base network info
-_default_domain: "example.ca"
+_default_domain: "demo.net"
 
 git_configs:
   - name: "user.name"
