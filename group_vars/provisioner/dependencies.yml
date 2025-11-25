@@ -61,7 +61,7 @@ ansible_galaxy_server_list:
     token: "{{ redhat_automation_hub_token_vault }}"
 
 rhis_repo_path: "~/rhis/"
-my_git_username: "<YourGitUserNameHere>"
+my_git_username: "calvingsmith"
 rhis_git_repos:
   - name: "rhis-builder-idm"
     url: "https://github.com/{{ my_git_username }}/rhis-builder-idm.git"
