@@ -6,3 +6,4 @@ context
 *.pem
 .ansible
 vault
+notes.txt
