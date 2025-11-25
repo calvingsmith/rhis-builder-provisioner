@@ -3,7 +3,7 @@
 collections:
   - name: azure.azcollection
   - name: community.general
-    version: 11.3.0
+    version: "<10"
   - name: community.vmware
     version: 6.1.0
   - name: community.aws
