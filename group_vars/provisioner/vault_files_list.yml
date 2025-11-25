@@ -11,7 +11,7 @@ rhis_user: "rhis"   # required if using vault_files_list
 # -e "remote_path=/home/ansiblerunner/.my_private_dir"
 
 vault_files_list:
-  - ~/vault/demo.net/rhis_builder_vault.yml
+  - rhis_builder_vault.yml
 #  - ~/vault/rhis_builder_idm_vault.yml
 #  - ~/vault/rhis_builder_aap_vault.yml
 #  - ~/vault/rhis_builder_nbde_vault.yml

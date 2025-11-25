@@ -57,7 +57,7 @@
 
     - name: "Get the server list"
       ansible.builtin.set_fact:
-        server_list: "{{ lookup('ansible.builtin.ini', 'server_list', section='galaxy', file=config_path) | split(',') | trim }}"
+        server_list: "{{ lookup('ansible.builtin.ini', 'server_list', section='galaxy', file=config_path) | split(',') | map('trim') | list }}"
 
     - name: "Get the list of urls for the entries"
       ansible.builtin.set_fact:
