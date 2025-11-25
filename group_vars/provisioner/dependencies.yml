@@ -37,8 +37,7 @@ ssh_key_cipher: "ed25519"
 ssh_key_file_path: "~/.ssh/id_ed25519"
 ssh_public_key_path: "~/.ssh/id_ed25519.pub"
 
-rhah_url: "https://cloud.redhat.com/api/automation-hub/"
-
+rhah_url: "https://console.redhat.com/api/automation-hub/content/published/"
 rpm_dep_list:
   - ansible-core
   - git
