@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../rhis-builder-inventory"
+		},
+		{
+			"path": "../rhis-builder-idm"
 		}
 	],
 	"settings": {
