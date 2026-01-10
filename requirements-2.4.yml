@@ -1,0 +1,5 @@
+---
+# These are the collections required by the builder
+collections:
+  - name: community.general
+    version: "<10"

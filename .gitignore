@@ -7,3 +7,4 @@ context
 .ansible
 vault
 notes.txt
+ansible.cfg
