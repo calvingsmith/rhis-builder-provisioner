@@ -1,6 +1,6 @@
 [provisioner]
-builder.demo.net
+builder.demo.net    ansible_host=192.168.25.2
 
 [bootstrap]
-idm.demo.net
-satellite.demo.net
+idm.demo.net        ansible_host=192.168.25.10
+satellite.demo.net  ansible_host=192.168.25.11

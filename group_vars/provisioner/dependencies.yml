@@ -8,10 +8,10 @@ _default_domain: "demo.net"
 git_configs:
   - name: "user.name"
     scope: "global"
-    value: "casmith@redhat.com"
+    value: "Calvin Smith"
   - name: "user.email"
     scope: "global"
-    value: "casmith@redhat.com"
+    value: "4283930+calvingsmith@users.noreply.github.com"
 
 environment_hosts:
   - name: "provisioner.{{ _default_domain }}"
