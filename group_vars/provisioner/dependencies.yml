@@ -15,11 +15,11 @@ git_configs:
 
 environment_hosts:
   - name: "provisioner.{{ _default_domain }}"
-    ip: "192.168.25.13"
+    ip: "192.168.25.2"
   - name: "idm.{{ _default_domain }}"
-    ip: "192.168.25.5"
+    ip: "192.168.25.10"
   - name: "satellite.{{ _default_domain }}"
-    ip: "192.168.25.12"
+    ip: "192.168.25.11"
   - name: "vcenter.{{ _default_domain }}"
     ip: "192.168.25.30"
   - name: "c3esx2.{{ _default_domain }}"
